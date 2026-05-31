@@ -1,0 +1,1646 @@
+WEBVTT
+
+1
+00:00:03.360 --> 00:00:04.520
+Caleob King: All right.
+
+2
+00:00:04.940 --> 00:00:06.590
+Caleob King: Hello, Precalculus!
+
+3
+00:00:07.110 --> 00:00:12.839
+Caleob King: So, we weren't able to meet on Monday, which made me sad, but we get to meet today, so that's great.
+
+4
+00:00:13.690 --> 00:00:17.010
+Caleob King: We spent some time learning how to
+
+5
+00:00:17.290 --> 00:00:32.589
+Caleob King: use polynomial division, and then use synthetic division, but all that was in search of a mathematician's favorite game, which was finding zeros, alright? And you might think, why is finding zeros so important?
+
+6
+00:00:32.790 --> 00:00:40.489
+Caleob King: And it's because every other problem can be reduced to finding zeros. Like, You know, something like,
+
+7
+00:00:43.530 --> 00:00:49.850
+Caleob King: you're wondering when X squared plus 5x, is equal to some random number, like 57?
+
+8
+00:00:50.470 --> 00:00:55.060
+Caleob King: Well, that's a hard problem, but, you know, you can turn this into a problem
+
+9
+00:00:55.430 --> 00:00:57.320
+Caleob King: When you're wondering when is it zero?
+
+10
+00:00:57.470 --> 00:00:58.220
+Caleob King: Alright?
+
+11
+00:00:58.360 --> 00:01:00.899
+Caleob King: So, every other problem…
+
+12
+00:01:03.050 --> 00:01:20.999
+Caleob King: could be reduced to finding zeros. So, if we learn to find zeros, then we can solve almost any problem. So that's why we learned different techniques. Now, the reason why we've picked a 0 and not some number like 1 or 10 or 100, is because 0 has some very important properties.
+
+13
+00:01:21.200 --> 00:01:36.779
+Caleob King: In particular, it has the zero product property, which means that if you multiply a whole bunch of things together, and they equal zero, then you know that one or all of the things that you multiplied together were zero. You know, if A times B is zero, then you know either A or B is 0.
+
+14
+00:01:37.420 --> 00:01:38.120
+Caleob King: Alright.
+
+15
+00:01:38.700 --> 00:01:42.720
+Caleob King: And, believe it or not, randomly plugging numbers in is…
+
+16
+00:01:42.870 --> 00:01:48.850
+Caleob King: maybe where to… the place to start. Because if you don't start there, you get lost in all the techniques.
+
+17
+00:01:49.470 --> 00:01:51.030
+Caleob King: But…
+
+18
+00:01:51.140 --> 00:01:57.729
+Caleob King: I think, I think the important thing to remember is we're just… we're hunting around in the dark for zeros, alright?
+
+19
+00:01:57.970 --> 00:02:00.830
+Caleob King: We have an equation up here.
+
+20
+00:02:01.500 --> 00:02:14.530
+Caleob King: X cubed minus X squared plus 19x minus 12, alright? And we're wondering what sort of number here might give us a 0. Anybody have any ideas? Just shot in the dark, there's…
+
+21
+00:02:14.710 --> 00:02:17.460
+Caleob King: No wrong answer here. Where should we start on this?
+
+22
+00:02:28.910 --> 00:02:44.229
+Caleob King: I'll need some audience participation. You know, no reason not to start at zero. I know it's going to end up to be minus 12, because all these are going to be 0, but it's good to know. It's a good reference point. I know that when I put a zero into this function, a minus 12 comes out.
+
+23
+00:02:44.540 --> 00:02:45.310
+Caleob King: Alright.
+
+24
+00:02:45.580 --> 00:02:46.829
+Caleob King: Not too bad.
+
+25
+00:02:47.510 --> 00:02:48.260
+Caleob King: Alright?
+
+26
+00:02:48.360 --> 00:02:49.680
+Caleob King: Any other guesses?
+
+27
+00:02:55.870 --> 00:02:57.180
+Caleob King: What about 12?
+
+28
+00:02:59.530 --> 00:03:03.979
+Caleob King: If we guess get, 12, we get, 792.
+
+29
+00:03:04.400 --> 00:03:05.459
+Caleob King: Way up there.
+
+30
+00:03:05.940 --> 00:03:10.630
+Caleob King: Alright? Now this tells us something very important. It tells us something very important.
+
+31
+00:03:11.130 --> 00:03:13.610
+Caleob King: if…
+
+32
+00:03:15.330 --> 00:03:23.169
+Caleob King: If the function is negative at 0 and positive at 12, alright, that tells us a very important clue.
+
+33
+00:03:23.290 --> 00:03:31.379
+Caleob King: Because I know polynomials are continuous and nice and smooth, it means that it must cross somewhere between 0 and 12.
+
+34
+00:03:31.870 --> 00:03:38.810
+Caleob King: Alright? That's… that's great! We've reduced the entire infinity of numbers to the places between 0 and 12.
+
+35
+00:03:39.260 --> 00:03:43.810
+Caleob King: Alright? That… I mean, there's still an infinity of numbers between 0 and 12, but…
+
+36
+00:03:44.020 --> 00:03:48.559
+Caleob King: It's… we've really narrowed it down. We've narrowed it down quite a bit.
+
+37
+00:03:49.220 --> 00:03:50.290
+Caleob King: Okay.
+
+38
+00:03:53.060 --> 00:03:59.029
+Caleob King: I would say, probably, this also tells us that the answer might be a little closer to 0 than it is to 12.
+
+39
+00:04:00.540 --> 00:04:03.369
+Caleob King: But… Any other guesses?
+
+40
+00:04:08.500 --> 00:04:09.700
+Caleob King: 1.5.
+
+41
+00:04:09.810 --> 00:04:14.880
+Caleob King: Now, you can already tell… that,
+
+42
+00:04:15.660 --> 00:04:26.410
+Caleob King: actually figuring this out without a calculator would be kind of complicated, right? I mean, imagine if someone tried… asked you to evaluate this function at 1.5. You'd have to…
+
+43
+00:04:26.580 --> 00:04:33.290
+Caleob King: Take 1.5 cubit, imagine doing that by hand, 1.5 times 1.5 times 1.5.
+
+44
+00:04:33.470 --> 00:04:42.989
+Caleob King: Alright, that's hard enough. Then you've got to subtract off 8 times 1.5. That's like, what, 12? Subtracting 12. Then we've got to add…
+
+45
+00:04:43.530 --> 00:04:46.800
+Caleob King: 19 times 1.5, and then subtract 12 off again.
+
+46
+00:04:47.070 --> 00:04:56.969
+Caleob King: It gets complicated. It gets complicated. But the computer makes everything nice and easy for us, and we see that a lot of things cancel out here, and we get this…
+
+47
+00:04:57.640 --> 00:05:01.980
+Caleob King: And what this tells us is that the answer has to be between 0 and 1.5.
+
+48
+00:05:03.560 --> 00:05:05.890
+Caleob King: Right? Now we've really narrowed it down.
+
+49
+00:05:18.330 --> 00:05:19.770
+Caleob King: Where should we go next?
+
+50
+00:05:35.160 --> 00:05:36.050
+Caleob King: Yup.
+
+51
+00:05:46.070 --> 00:05:46.950
+Caleob King: Alright.
+
+52
+00:05:47.760 --> 00:05:56.109
+Caleob King: It turns out that 1 is a 0 here, and we can actually do that math pretty easily. 1 cubed is 1.
+
+53
+00:05:56.370 --> 00:05:59.700
+Caleob King: Minus 8 times 1 squared, that's 1 minus 8.
+
+54
+00:05:59.840 --> 00:06:01.450
+Caleob King: That's minus 7.
+
+55
+00:06:01.770 --> 00:06:05.880
+Caleob King: plus 19, that's 12. 12 minus 12 is 0. All right.
+
+56
+00:06:06.280 --> 00:06:07.700
+Caleob King: One is…
+
+57
+00:06:08.000 --> 00:06:14.719
+Caleob King: what we call a zero for the function. We call them zeros, we call them solutions, we call them x-intercepts, we can call them all three.
+
+58
+00:06:16.420 --> 00:06:17.470
+Caleob King: Okay.
+
+59
+00:06:19.540 --> 00:06:25.560
+Caleob King: So… Finding this first zero was kind of tricky, we had to check a lot of different points.
+
+60
+00:06:28.070 --> 00:06:36.720
+Caleob King: Tell me, has, have you, looked at the rational root theorem yet in, before the quiz, or is that the first assignment after the quiz? I'm,
+
+61
+00:06:36.990 --> 00:06:38.360
+Caleob King: I just want to look at that.
+
+62
+00:06:50.470 --> 00:07:00.129
+Caleob King: Is that familiar to you, the rational root theorem? Yeah, I think it is after. I think it is after, too. There are some extra tricks we can use, to narrow down our guesses.
+
+63
+00:07:00.350 --> 00:07:01.110
+Caleob King: Alright?
+
+64
+00:07:01.230 --> 00:07:06.450
+Caleob King: And those tricks have to do with the factors of 12.
+
+65
+00:07:06.830 --> 00:07:07.880
+Caleob King: So…
+
+66
+00:07:08.530 --> 00:07:18.059
+Caleob King: If we're looking for a rational root, that means a nice even number, not a square root or something weird like that. If we're looking for one of those, it has to be a factor of 12.
+
+67
+00:07:18.300 --> 00:07:26.930
+Caleob King: divided by a factor of 1, so basically a factor of 12. So, we should look at things like, 1, 2, 3, 4, 6, 12.
+
+68
+00:07:27.030 --> 00:07:44.209
+Caleob King: Alright? Rational root theorem really narrows things down for us. We'll get that later. But that's all developed out of this fact that mathematicians did not like guessing. It took a lot of work. I mean, we've cut the work way down by letting the computer calculate this for us.
+
+69
+00:07:44.390 --> 00:07:46.920
+Caleob King: Imagine trying to figure it out at 1.2.
+
+70
+00:07:47.530 --> 00:07:48.280
+Caleob King: Right?
+
+71
+00:07:48.430 --> 00:07:50.830
+Caleob King: 1.2 looks really close.
+
+72
+00:07:51.040 --> 00:07:57.930
+Caleob King: But you'd have to cube it, and then multiply it by 8, and then multiply it by 19, and then do all this adding and subtracting.
+
+73
+00:07:58.530 --> 00:08:07.399
+Caleob King: Nobody wants to do all that work. Mathematicians came up with a lot of clever ways to shortcut a lot of that work, and it's hard to understand what you're learning until you
+
+74
+00:08:07.680 --> 00:08:21.239
+Caleob King: kind of internalize how much you're skipping, alright? So, that's why I always start these things by guessing zeros. It's how mathematicians started guessing zeros, and then they developed more and more fun ways to kind of make things easier for them.
+
+75
+00:08:21.860 --> 00:08:22.709
+Caleob King: All right.
+
+76
+00:08:23.630 --> 00:08:26.950
+Caleob King: Well, we've found one zero, yes.
+
+77
+00:08:27.700 --> 00:08:34.840
+Caleob King: But… This is a cubic equation. How many zeros does a cubic equation have?
+
+78
+00:08:46.220 --> 00:08:47.449
+Caleob King: It has 3.
+
+79
+00:08:47.720 --> 00:08:49.049
+Caleob King: It has 3.
+
+80
+00:08:49.580 --> 00:08:50.360
+Caleob King: Right?
+
+81
+00:08:50.810 --> 00:08:56.510
+Caleob King: And… So… We could, if we were so inclined.
+
+82
+00:08:57.600 --> 00:09:04.000
+Caleob King: Spent a lot of time guessing those… guessing more zeros, trying to find out Where they are.
+
+83
+00:09:04.120 --> 00:09:08.150
+Caleob King: Let's switch over to here.
+
+84
+00:09:10.770 --> 00:09:17.000
+Caleob King: There's no guarantee, by the way, that all three of those zeros are real. This is a cubic equation, it could look like this.
+
+85
+00:09:20.170 --> 00:09:20.970
+Caleob King: Alright?
+
+86
+00:09:21.420 --> 00:09:30.759
+Caleob King: We could poke around for a long time and find out there are no more rule, no more zeros. Or it might be a weird square root that is hard for us to find.
+
+87
+00:09:30.950 --> 00:09:31.669
+Caleob King: All right.
+
+88
+00:09:32.950 --> 00:09:45.879
+Caleob King: Because it's cubic, we kind of know the end behavior of this function is kind of down here and up here, so we know a cubic equation at least has one real zero, but finding the others by guessing
+
+89
+00:09:46.250 --> 00:09:49.429
+Caleob King: It'll take a lot of work, and it's not guaranteed to succeed.
+
+90
+00:09:50.010 --> 00:09:50.960
+Caleob King: So…
+
+91
+00:09:51.180 --> 00:10:00.079
+Caleob King: Because mathematicians don't like working and chugging through numbers just to find none of them work, they developed some other ways to figure out zeros.
+
+92
+00:10:00.180 --> 00:10:11.399
+Caleob King: All right? And one of those ways is to use division. We've practiced division, we've used synthetic division. Basically, what they're going to try to do is we're going to try to take this polynomial.
+
+93
+00:10:21.580 --> 00:10:22.650
+Caleob King: There we go.
+
+94
+00:10:24.320 --> 00:10:30.400
+Caleob King: And we're gonna divide out the factor that we know, alright? This is from what something called the,
+
+95
+00:10:31.870 --> 00:10:33.760
+Caleob King: The, the remainder theorem.
+
+96
+00:10:34.010 --> 00:10:37.270
+Caleob King: Basically saying that if something is a zero.
+
+97
+00:10:38.390 --> 00:10:42.259
+Caleob King: We know that 1 is a 0. X equals 1 is a 0.
+
+98
+00:10:47.170 --> 00:10:55.920
+Caleob King: Alright, because it's a zero, this means… that X minus 1 is a factor.
+
+99
+00:10:57.530 --> 00:10:58.339
+Caleob King: All right.
+
+100
+00:10:59.470 --> 00:11:16.050
+Caleob King: That theorem will be list… will be listed in your book. They act like it's a big deal, I don't think they really explain why. Basically, they're saying, hey, if we find one zero, that means it divides evenly. The polynomial divides evenly. And this can help us. This can help us. So, let me show you what I mean.
+
+101
+00:11:16.560 --> 00:11:19.860
+Caleob King: We could divide this out.
+
+102
+00:11:22.920 --> 00:11:24.699
+Caleob King: We could divide X minus 1.
+
+103
+00:11:25.300 --> 00:11:26.160
+Caleob King: Alright.
+
+104
+00:11:26.950 --> 00:11:31.870
+Caleob King: And what we would do is we would say something like X goes into X cubed.
+
+105
+00:11:32.030 --> 00:11:34.349
+Caleob King: an X squared number of times.
+
+106
+00:11:35.180 --> 00:11:37.599
+Caleob King: I would multiply X squared times X,
+
+107
+00:11:38.370 --> 00:11:41.140
+Caleob King: get X cubed, I'd multiply X squared times minus 1.
+
+108
+00:11:41.400 --> 00:11:43.329
+Caleob King: to get minus X squared.
+
+109
+00:11:44.460 --> 00:11:48.849
+Caleob King: I would flip all the signs, And I would add.
+
+110
+00:11:52.320 --> 00:11:54.259
+Caleob King: then I would bring down 19x.
+
+111
+00:11:55.550 --> 00:12:04.430
+Caleob King: We went through this last lesson, but it's, I thought we should do one more here. And then I would try again. I would say X goes into minus 7X squared.
+
+112
+00:12:04.750 --> 00:12:15.580
+Caleob King: Minus 7X times… Then I'd multiply minus 7X times X, so minus 7X squared, excellent.
+
+113
+00:12:23.070 --> 00:12:31.700
+Caleob King: I'll tackle that in just a second. Minus 7X times minus 1, would be, plus 7X.
+
+114
+00:12:35.130 --> 00:12:36.010
+Caleob King: Alright.
+
+115
+00:12:36.280 --> 00:12:41.020
+Caleob King: But… and then remember, I'm going to… Change all the signs.
+
+116
+00:12:43.020 --> 00:12:44.080
+Caleob King: And then add.
+
+117
+00:12:45.720 --> 00:12:46.600
+Caleob King: Alright.
+
+118
+00:12:47.620 --> 00:12:50.779
+Caleob King: These cancel out, and I get 12X.
+
+119
+00:12:54.970 --> 00:12:57.359
+Caleob King: X goes into 12X 12 times.
+
+120
+00:13:01.220 --> 00:13:04.880
+Caleob King: 12x minus 12… Flip all the signs…
+
+121
+00:13:05.030 --> 00:13:09.569
+Caleob King: and add, we get 0. That's what we said. These, these things…
+
+122
+00:13:10.140 --> 00:13:11.739
+Caleob King: The remainder would be zero.
+
+123
+00:13:12.280 --> 00:13:13.060
+Caleob King: Alright.
+
+124
+00:13:13.420 --> 00:13:19.819
+Caleob King: And the question came up here that, what happens if the powers aren't the same? All right?
+
+125
+00:13:20.220 --> 00:13:25.710
+Caleob King: And it turns out, well, they always are going to be the same if… you…
+
+126
+00:13:26.410 --> 00:13:31.450
+Caleob King: Make sure that there's always, the powers decrease predictably.
+
+127
+00:13:31.900 --> 00:13:41.439
+Caleob King: cube, square, linear, constant, you know, 3, 2, 1, 0. If you had, for instance, if there was no 19X,
+
+128
+00:13:41.840 --> 00:13:43.529
+Caleob King: I mean, if this,
+
+129
+00:13:49.700 --> 00:13:52.990
+Caleob King: You know, if this was like this, and it was just minus 12,
+
+130
+00:13:54.180 --> 00:14:01.650
+Caleob King: Right? Yeah, if you jump from square to… if you skip a linear term, you're out of luck. And so, what you need to do is, if that's the case.
+
+131
+00:14:01.940 --> 00:14:05.899
+Caleob King: You need to add in the missing power.
+
+132
+00:14:06.080 --> 00:14:09.950
+Caleob King: Alright, with a zero coefficient in front of it, in order for the division to work.
+
+133
+00:14:10.100 --> 00:14:13.339
+Caleob King: Just like you'd use it as a placeholder when,
+
+134
+00:14:13.730 --> 00:14:20.580
+Caleob King: If you were dividing, you know, 1,800… Or…
+
+135
+00:14:21.220 --> 00:14:27.689
+Caleob King: 18,024. This zero is important, right? It says something, it puts the 24 where it needs to be.
+
+136
+00:14:27.870 --> 00:14:29.010
+Caleob King: Alright, so…
+
+137
+00:14:29.120 --> 00:14:33.590
+Caleob King: What I'm saying is, is that if you're missing an X term, add a 0X in there to make it all work out.
+
+138
+00:14:35.640 --> 00:14:38.180
+Caleob King: But, we didn't have to do that with this one.
+
+139
+00:14:40.090 --> 00:14:44.909
+Caleob King: It was 19, and there we go. So yeah, make sure that you have a representative of every power there.
+
+140
+00:14:48.320 --> 00:14:49.200
+Caleob King: Alright.
+
+141
+00:14:49.840 --> 00:14:55.940
+Caleob King: Now here's the deal. Because this divides out evenly, Right?
+
+142
+00:14:58.440 --> 00:15:00.490
+Caleob King: This means we can rewrite this.
+
+143
+00:15:14.460 --> 00:15:15.869
+Caleob King: As this times this.
+
+144
+00:15:22.340 --> 00:15:30.509
+Caleob King: And the great thing about finding zeros of, this is it's really easy. The zero is one.
+
+145
+00:15:31.340 --> 00:15:33.850
+Caleob King: And the great thing about finding zeros of this…
+
+146
+00:15:34.890 --> 00:15:38.569
+Caleob King: Is that we have all sorts of techniques for finding zeros of quadratics.
+
+147
+00:15:38.740 --> 00:15:41.629
+Caleob King: Right? We don't have a whole lot of techniques for cubes.
+
+148
+00:15:41.780 --> 00:15:45.670
+Caleob King: But we've reduced this problem to a linear term, which we can solve.
+
+149
+00:15:45.820 --> 00:15:48.110
+Caleob King: And a quadratic term, which we can solve.
+
+150
+00:15:48.550 --> 00:15:55.039
+Caleob King: Alright? Math is all about going from complicated problems that you can't tackle, breaking it up into simpler problems that you can't.
+
+151
+00:15:57.150 --> 00:16:02.959
+Caleob King: Alright? Now, if you just saw this on your Algebra 2 test, say, you know, a year ago.
+
+152
+00:16:03.080 --> 00:16:05.779
+Caleob King: Or maybe more realistically, 6 months ago.
+
+153
+00:16:05.890 --> 00:16:13.080
+Caleob King: How would you find the zeros, or find the solutions to this quadratic equation? X squared minus 7X plus 12.
+
+154
+00:16:13.520 --> 00:16:15.259
+Caleob King: There's a whole bunch of ways you can do it.
+
+155
+00:16:16.170 --> 00:16:18.840
+Caleob King: Let's, let's talk about them.
+
+156
+00:16:20.430 --> 00:16:27.130
+Caleob King: And it's okay if you don't remember how to do it, if you just remember the name of the technique, maybe we could talk about that, too.
+
+157
+00:16:30.210 --> 00:16:33.519
+Caleob King: You could throw around some numbers in there, see if there's any zeros.
+
+158
+00:16:36.370 --> 00:16:39.179
+Caleob King: So guessing is always available to us, for sure.
+
+159
+00:16:42.750 --> 00:16:46.329
+Caleob King: Do you remember any formulas that were useful for quadratics?
+
+160
+00:16:47.220 --> 00:16:48.220
+Caleob King: He says.
+
+161
+00:16:49.560 --> 00:16:50.950
+Caleob King: Is a leading question.
+
+162
+00:16:55.520 --> 00:17:03.549
+Caleob King: Oh, whatever would make it to a 12, You know what?
+
+163
+00:17:03.830 --> 00:17:06.869
+Caleob King: If you mean that maybe you should try to factor this?
+
+164
+00:17:07.500 --> 00:17:09.299
+Caleob King: You could solve this by factoring.
+
+165
+00:17:13.130 --> 00:17:16.320
+Caleob King: I know this is… this is my favorite way of doing it.
+
+166
+00:17:16.770 --> 00:17:23.700
+Caleob King: Well, the negative 12 came from the fact that we multiply
+
+167
+00:17:24.130 --> 00:17:28.190
+Caleob King: this 12 and this minus 1. That's where this minus 12 comes from.
+
+168
+00:17:29.570 --> 00:17:40.350
+Caleob King: All right but… One way to solve a quadratic is to try to break it up into…
+
+169
+00:17:40.860 --> 00:17:42.220
+Caleob King: Two linear terms?
+
+170
+00:17:42.980 --> 00:17:45.600
+Caleob King: And you would be look… looking for two things.
+
+171
+00:17:45.750 --> 00:17:47.529
+Caleob King: Like, that multiply?
+
+172
+00:17:50.560 --> 00:17:57.340
+Caleob King: to be 12, but that ad… To be minus 7th.
+
+173
+00:18:11.330 --> 00:18:12.250
+Caleob King: Hmm.
+
+174
+00:18:20.160 --> 00:18:20.830
+Caleob King: Oh.
+
+175
+00:18:22.250 --> 00:18:28.630
+Caleob King: That's, that's… that's interesting, that… I haven't thought about that. I'll have to think about that some more, Jesse, that… that finding that.
+
+176
+00:18:29.610 --> 00:18:36.889
+Caleob King: solution. But yeah, minus 3 and minus 4 are the number we're looking for, right? Turns out that minus 3 and minus 4
+
+177
+00:18:40.160 --> 00:18:42.480
+Caleob King: Are, definitely things that would work.
+
+178
+00:18:43.380 --> 00:18:44.280
+Caleob King: Alright.
+
+179
+00:18:45.460 --> 00:18:52.270
+Caleob King: And sure enough, we have taken this into fully factored form. If we're right, If we're right.
+
+180
+00:18:52.440 --> 00:18:58.789
+Caleob King: Then, the other… what are the other zeros? We found, you know, we found one.
+
+181
+00:18:59.030 --> 00:19:00.389
+Caleob King: What are the other zeros?
+
+182
+00:19:09.930 --> 00:19:12.759
+Caleob King: Yep, one is… one is the first zero we found.
+
+183
+00:19:16.350 --> 00:19:19.439
+Caleob King: What sort of X would make these other terms 0?
+
+184
+00:19:22.660 --> 00:19:24.919
+Caleob King: Yep, 3 and, of course, 4.
+
+185
+00:19:28.700 --> 00:19:29.400
+Caleob King: Alright.
+
+186
+00:19:30.690 --> 00:19:36.490
+Caleob King: And we could check it by hand if we wanted. 3 cubed is 27.
+
+187
+00:19:37.640 --> 00:19:47.389
+Caleob King: Minus 8 times 9… Plus 19 times 3… Minus 12.
+
+188
+00:19:47.830 --> 00:20:02.170
+Caleob King: Whew! That's 27 minus 72… Plus, 57… minus 12, and…
+
+189
+00:20:02.490 --> 00:20:03.950
+Caleob King: You can check that if you want.
+
+190
+00:20:04.470 --> 00:20:10.010
+Caleob King: But, it is zero. It is zero. Now.
+
+191
+00:20:10.470 --> 00:20:13.970
+Caleob King: I'm not working to a… I'm not looking to do a whole bunch of work.
+
+192
+00:20:14.940 --> 00:20:18.750
+Caleob King: I would be happy to… Try it out at 3…
+
+193
+00:20:19.680 --> 00:20:22.229
+Caleob King: 4, and sure enough, we found that.
+
+194
+00:20:23.660 --> 00:20:24.770
+Caleob King: Okay.
+
+195
+00:20:25.660 --> 00:20:27.090
+Caleob King: Can we stop looking?
+
+196
+00:20:37.080 --> 00:20:39.540
+Caleob King: Might there be some more zeros hiding out there somewhere?
+
+197
+00:20:47.090 --> 00:20:49.200
+Caleob King: But yep, we found 3 of them.
+
+198
+00:20:52.140 --> 00:20:59.419
+Caleob King: No, because it's a third degree polynomial, we know that there are at maximum 3 places where it's 0 on this, on the graph.
+
+199
+00:21:00.420 --> 00:21:01.750
+Caleob King: So we found them all.
+
+200
+00:21:05.430 --> 00:21:06.570
+Caleob King: Alright!
+
+201
+00:21:07.020 --> 00:21:09.589
+Caleob King: So, what did we do? We…
+
+202
+00:21:09.750 --> 00:21:14.240
+Caleob King: Looked at the graph, we guessed around a little bit until we found one zero.
+
+203
+00:21:15.140 --> 00:21:24.109
+Caleob King: All right. We're able to learn some techniques to make your guesses a little bit easier, but, remember also you can also graph to find a zero.
+
+204
+00:21:25.560 --> 00:21:32.250
+Caleob King: But once you find one zero, you can use division to reduce the problem slightly and make it a little bit more tractable.
+
+205
+00:21:32.850 --> 00:21:33.710
+Caleob King: Alright.
+
+206
+00:21:46.880 --> 00:21:47.710
+Caleob King: It's true.
+
+207
+00:21:52.490 --> 00:21:54.100
+Caleob King: Alright,
+
+208
+00:22:02.240 --> 00:22:08.089
+Caleob King: Let's see here… Let's do this one more time.
+
+209
+00:22:36.350 --> 00:22:37.589
+Caleob King: One second…
+
+210
+00:22:43.130 --> 00:22:46.670
+Caleob King: Sorry, I have a couple problems that I want to try out here for you.
+
+211
+00:23:04.520 --> 00:23:05.850
+Caleob King: Alright.
+
+212
+00:23:10.550 --> 00:23:14.870
+Caleob King: Let's take a look at this. We're gonna try to find some zeros on these.
+
+213
+00:23:15.180 --> 00:23:17.689
+Caleob King: I'll let you guys pick. Which one do you want?
+
+214
+00:23:18.490 --> 00:23:20.039
+Caleob King: A, B, C, or D?
+
+215
+00:23:35.920 --> 00:23:38.580
+Caleob King: We'll definitely do something with a jump in there.
+
+216
+00:23:40.230 --> 00:23:47.499
+Caleob King: But… Creating one on the fly doesn't always work out as well as you'd think.
+
+217
+00:23:47.860 --> 00:23:48.710
+Caleob King: But yes.
+
+218
+00:23:50.580 --> 00:23:51.950
+Caleob King: So what do you think we should try?
+
+219
+00:23:56.250 --> 00:24:02.830
+Caleob King: All right, we can definitely do the… do this one here.
+
+220
+00:24:03.260 --> 00:24:06.299
+Caleob King: This is a fourth degree polynomial, it has four zeros.
+
+221
+00:24:06.970 --> 00:24:07.870
+Caleob King: All right.
+
+222
+00:24:08.920 --> 00:24:12.960
+Caleob King: Let's see if we can…
+
+223
+00:24:25.420 --> 00:24:28.000
+Caleob King: Save ourselves a little bit of work here.
+
+224
+00:24:45.880 --> 00:24:47.510
+Caleob King: Alright, here it is.
+
+225
+00:24:48.070 --> 00:24:59.280
+Caleob King: Now, you might say, Mr. King, if I wanted to know the zeros, I would just hit this little button here, and it would tell me exactly where there are. I realize this, alright?
+
+226
+00:25:00.770 --> 00:25:07.490
+Caleob King: These are techniques that were developed in the 16th century before graphing utilities, and they still have value, alright?
+
+227
+00:25:07.760 --> 00:25:13.349
+Caleob King: The reason I think they still have value is they show how you can use cleverness.
+
+228
+00:25:13.510 --> 00:25:16.680
+Caleob King: To figure out the unknown based on what's known.
+
+229
+00:25:16.800 --> 00:25:23.030
+Caleob King: And the more ways you have of going from unknown to known, the more powerful you'll be in your own life. Now.
+
+230
+00:25:23.290 --> 00:25:34.400
+Caleob King: So, I'm going to maddeningly not turn on this very useful graph, which would tell you exactly where the zeros are, and instead, we're going to do it the old way, the slow way, the guessing way, alright?
+
+231
+00:25:38.360 --> 00:25:40.710
+Caleob King: Absolutely.
+
+232
+00:25:44.930 --> 00:25:47.339
+Caleob King: So yeah, where should we start first?
+
+233
+00:25:47.480 --> 00:25:50.580
+Caleob King: Of course, guessing 0 gets us to 12.
+
+234
+00:25:53.320 --> 00:25:54.329
+Caleob King: There we go.
+
+235
+00:25:57.570 --> 00:26:02.750
+Caleob King: What about, what about the fact of, what would happen if I put a positive number in for X?
+
+236
+00:26:03.440 --> 00:26:04.880
+Caleob King: Any positive number.
+
+237
+00:26:08.520 --> 00:26:16.839
+Caleob King: If I put a positive number in for X, wouldn't this be positive, and this would be positive, and this would be positive, and this is positive, and this is positive?
+
+238
+00:26:18.100 --> 00:26:20.149
+Caleob King: It would just be a big number, right?
+
+239
+00:26:20.330 --> 00:26:36.209
+Caleob King: This is another rule you'll learn, it's called the Descartes Rule of Sines, basically using how many things are positive to kind of guess whether the zeros are on the positive side or the negative side. So I would submit that you don't want a positive number. You want a negative number.
+
+240
+00:26:36.320 --> 00:26:38.789
+Caleob King: Alright, so we're gonna guess some negative numbers.
+
+241
+00:26:39.220 --> 00:26:43.859
+Caleob King: And furthermore, I would suggest we guess factors of 12.
+
+242
+00:26:45.200 --> 00:26:48.369
+Caleob King: Like I said, you're gonna learn more of that later. Where would you like to start?
+
+243
+00:26:50.810 --> 00:26:52.230
+Caleob King: No wrong answers.
+
+244
+00:26:55.040 --> 00:26:56.750
+Caleob King: Like I said, we're just guessing.
+
+245
+00:27:01.530 --> 00:27:02.690
+Caleob King: All right.
+
+246
+00:27:03.170 --> 00:27:06.430
+Caleob King: Minus 6 gets us to, 3,000 or so.
+
+247
+00:27:06.940 --> 00:27:07.900
+Caleob King: Alright.
+
+248
+00:27:08.840 --> 00:27:13.949
+Caleob King: So far, we're, we're definitely positive.
+
+249
+00:27:19.310 --> 00:27:20.500
+Caleob King: Any other thoughts?
+
+250
+00:27:34.500 --> 00:27:43.459
+Caleob King: It turns out that it can't be a multiple of 12, it has to be a factor of 12, divided by a factor of 4. So, I mean, we could guess it.
+
+251
+00:27:44.270 --> 00:27:47.920
+Caleob King: But it gets us up to several million, almost a little over a million.
+
+252
+00:27:48.520 --> 00:27:52.299
+Caleob King: So, I would say think smaller.
+
+253
+00:27:57.660 --> 00:27:58.809
+Caleob King: We're getting there.
+
+254
+00:28:13.430 --> 00:28:16.539
+Caleob King: Not bad. All right.
+
+255
+00:28:16.880 --> 00:28:20.579
+Caleob King: It turns out that minus 1 half is a zero.
+
+256
+00:28:20.870 --> 00:28:22.080
+Caleob King: Alright.
+
+257
+00:28:27.750 --> 00:28:28.880
+Caleob King: Well…
+
+258
+00:28:33.760 --> 00:28:36.539
+Caleob King: We absolutely can use…
+
+259
+00:28:42.100 --> 00:28:49.150
+Caleob King: division to, to go there. However, doing it with
+
+260
+00:28:55.940 --> 00:28:59.389
+Caleob King: This is gonna get to a lot of fractions, really fast.
+
+261
+00:29:00.300 --> 00:29:12.279
+Caleob King: And I don't know about you, but I don't like fractions very much, and they're made more complicated when I have to add in all these things. Let's do this with synthetic division.
+
+262
+00:29:12.710 --> 00:29:13.480
+Caleob King: Alright.
+
+263
+00:29:14.770 --> 00:29:16.600
+Caleob King: Oh, sorry, it would be plus one half.
+
+264
+00:29:20.510 --> 00:29:25.039
+Caleob King: If the factor is minus 1 half, if the zero is minus one half, the factor is plus one half.
+
+265
+00:29:29.290 --> 00:29:30.050
+Caleob King: I…
+
+266
+00:29:32.750 --> 00:29:41.530
+Caleob King: Now, what happens is, I don't mind fractions, but I like to eliminate one. Instead, we're going to use synthetic division. Remember, for synthetic division.
+
+267
+00:29:41.940 --> 00:29:46.240
+Caleob King: You put just the coefficients, the 4, the 8.
+
+268
+00:29:47.230 --> 00:29:52.589
+Caleob King: the 19… the 32… the 12.
+
+269
+00:29:54.690 --> 00:29:57.499
+Caleob King: And then we write the zero right here.
+
+270
+00:29:59.510 --> 00:30:02.680
+Caleob King: Which we just found was minus 1 half, right?
+
+271
+00:30:05.950 --> 00:30:10.440
+Caleob King: When we do this, We drop down the first one.
+
+272
+00:30:11.160 --> 00:30:15.490
+Caleob King: And then we just do this multiply and add, multiply and add, multiply and add operation.
+
+273
+00:30:15.710 --> 00:30:18.420
+Caleob King: We're gonna multiply 1 half and 4,
+
+274
+00:30:18.680 --> 00:30:20.439
+Caleob King: And we're gonna get minus 2.
+
+275
+00:30:21.350 --> 00:30:23.630
+Caleob King: And then we add. We get 6.
+
+276
+00:30:25.200 --> 00:30:26.040
+Caleob King: Alright?
+
+277
+00:30:27.420 --> 00:30:31.830
+Caleob King: Basically, and I'm going to multiply these, minus 1 half and 6 is 3.
+
+278
+00:30:33.350 --> 00:30:34.700
+Caleob King: It's that simple.
+
+279
+00:30:34.870 --> 00:30:36.980
+Caleob King: Sorry, minus 3.
+
+280
+00:30:40.150 --> 00:30:42.350
+Caleob King: Alright, just multiply and add.
+
+281
+00:30:42.660 --> 00:30:45.289
+Caleob King: So what's the next one? Minus 1 half times 16.
+
+282
+00:30:55.460 --> 00:30:57.599
+Caleob King: Yep, we get a minus 8.
+
+283
+00:30:59.340 --> 00:31:03.520
+Caleob King: And then we add it, we get, what, 26?
+
+284
+00:31:05.930 --> 00:31:06.780
+Caleob King: No.
+
+285
+00:31:08.370 --> 00:31:11.450
+Caleob King: 24. Sorry, almost made a mistake there.
+
+286
+00:31:12.730 --> 00:31:15.970
+Caleob King: And then minus 1 half times 24 is minus 12.
+
+287
+00:31:16.950 --> 00:31:21.440
+Caleob King: And the remainder is 0, which… Should make us feel good.
+
+288
+00:31:23.380 --> 00:31:24.290
+Caleob King: There we go.
+
+289
+00:31:26.860 --> 00:31:32.520
+Caleob King: I think that was a lot easier than, like, trying to follow everything out. Even with the fraction, it was not that bad.
+
+290
+00:31:40.640 --> 00:31:41.750
+Caleob King: Alright.
+
+291
+00:31:42.370 --> 00:31:48.210
+Caleob King: What this means… Is that we can factor this, this polynomial.
+
+292
+00:32:01.040 --> 00:32:06.700
+Caleob King: One second… Trying to, do something without showing ya.
+
+293
+00:32:08.410 --> 00:32:11.149
+Caleob King: So, let me add some things in here.
+
+294
+00:32:17.200 --> 00:32:17.970
+Caleob King: Alright.
+
+295
+00:32:28.670 --> 00:32:31.230
+Caleob King: Okay. This is what we've done.
+
+296
+00:32:31.580 --> 00:32:34.640
+Caleob King: We've taken this… complicated thing.
+
+297
+00:32:38.090 --> 00:32:42.459
+Caleob King: And we've turned it into a cubic thing times a linear thing, alright?
+
+298
+00:32:42.660 --> 00:32:48.109
+Caleob King: By the way, the name for this, fourth degree power thing is called a quartic, a quartic.
+
+299
+00:32:49.340 --> 00:32:53.720
+Caleob King: And a quartic has been reduced to a cubic times a linear term.
+
+300
+00:32:54.850 --> 00:32:55.690
+Caleob King: Alright.
+
+301
+00:32:56.370 --> 00:33:05.250
+Caleob King: Now, we're still not out of the woods yet, right? Because there's no really easy way to find zeros of a cubic. I mean, there is a formula for it.
+
+302
+00:33:05.550 --> 00:33:11.809
+Caleob King: But it's long and complicated. You don't learn it in this math class. But it is… it is out there.
+
+303
+00:33:12.610 --> 00:33:13.310
+Caleob King: Alright.
+
+304
+00:33:15.310 --> 00:33:21.280
+Caleob King: Now, there is something that is easy to factor out of this. Does anyone see something that I can factor out of this really easily?
+
+305
+00:33:29.190 --> 00:33:31.489
+Caleob King: I'll give you a hint, it has nothing to do with variables.
+
+306
+00:33:44.570 --> 00:33:45.500
+Caleob King: Do you see a…
+
+307
+00:33:49.240 --> 00:33:50.590
+Caleob King: Hmm, interesting.
+
+308
+00:33:54.660 --> 00:34:03.130
+Caleob King: There is a very… you're noticing a really cool grouping there, which would… is… is kind of,
+
+309
+00:34:10.350 --> 00:34:11.960
+Caleob King: It's not unimportant.
+
+310
+00:34:12.630 --> 00:34:14.070
+Caleob King: That you're seeing that.
+
+311
+00:34:14.370 --> 00:34:22.159
+Caleob King: like the 4 and the 16, and the 6 and the 24. You could fa- you could factor this by grouping.
+
+312
+00:34:22.810 --> 00:34:29.130
+Caleob King: So, you can, you could do something along those lines.
+
+313
+00:34:29.920 --> 00:34:40.159
+Caleob King: But… So, what I'm saying is that pattern's important to notice, but let's not go that way.
+
+314
+00:34:42.580 --> 00:34:50.989
+Caleob King: What I'm trying to get at here is that, these are all even numbers. You could factor a 2 out of this thing. You could make it a little bit simpler.
+
+315
+00:34:51.159 --> 00:34:51.889
+Caleob King: Oh!
+
+316
+00:35:06.970 --> 00:35:07.850
+Caleob King: Alright.
+
+317
+00:35:09.110 --> 00:35:14.339
+Caleob King: So we're still looking for zeros, we're still looking for negative zeros.
+
+318
+00:35:14.650 --> 00:35:18.690
+Caleob King: Right? And we're still looking for zeros that are factors of 12.
+
+319
+00:35:18.980 --> 00:35:22.849
+Caleob King: Divided by factors of 4.
+
+320
+00:35:49.750 --> 00:35:54.659
+Caleob King: Alright, but this tells us that there's, there must be a 0 between minus 1 and minus 2.
+
+321
+00:35:55.680 --> 00:35:56.440
+Caleob King: Right?
+
+322
+00:35:56.760 --> 00:35:57.930
+Caleob King: So…
+
+323
+00:36:01.740 --> 00:36:02.680
+Caleob King: There we go.
+
+324
+00:36:03.040 --> 00:36:07.080
+Caleob King: Alright? So, hunting around for zeros.
+
+325
+00:36:07.430 --> 00:36:17.579
+Caleob King: This actually is 3 halves, 3 halves, and 3 halves is a factor of 12 divided by a factor of 2, so it does work.
+
+326
+00:36:17.860 --> 00:36:22.720
+Caleob King: But yeah, so, minus 3 halves, I'm gonna write it as a fraction here.
+
+327
+00:36:24.320 --> 00:36:25.330
+Caleob King: But there we go.
+
+328
+00:36:25.760 --> 00:36:26.650
+Caleob King: Okay.
+
+329
+00:36:27.060 --> 00:36:28.639
+Caleob King: That's another answer for us.
+
+330
+00:36:29.300 --> 00:36:36.549
+Caleob King: Alright? One of the advantages of…
+
+331
+00:36:37.270 --> 00:36:41.430
+Caleob King: Synthetic division, is that once you're here, you don't have to rewrite it.
+
+332
+00:36:47.530 --> 00:36:48.960
+Caleob King: You can just continue it.
+
+333
+00:36:49.770 --> 00:36:50.470
+Caleob King: Right?
+
+334
+00:36:56.600 --> 00:37:09.330
+Caleob King: So, it's really a very compact way of doing math, and we're gonna do exactly the same thing again. We're gonna take 4 times minus 3 twelfths, sorry, 3 halves, which is minus 12 halves, or minus 6.
+
+335
+00:37:11.670 --> 00:37:13.000
+Caleob King: Alright.
+
+336
+00:37:13.750 --> 00:37:19.339
+Caleob King: That's zero… This becomes 0, this becomes 16.
+
+337
+00:37:20.710 --> 00:37:21.520
+Caleob King: Alright?
+
+338
+00:37:23.180 --> 00:37:26.430
+Caleob King: Then we get, what, minus 24?
+
+339
+00:37:29.710 --> 00:37:33.770
+Caleob King: And luckily, That is our remainder, that's zero.
+
+340
+00:37:42.350 --> 00:37:44.539
+Caleob King: So, I think that's kinda cool.
+
+341
+00:37:55.560 --> 00:37:57.730
+Caleob King: Our detective work is almost done.
+
+342
+00:38:18.290 --> 00:38:20.890
+Caleob King: Alright, let's switch over. Alright.
+
+343
+00:38:21.390 --> 00:38:29.700
+Caleob King: We have gone from this complicated quartic, To this cubic, Alright.
+
+344
+00:38:30.500 --> 00:38:32.210
+Caleob King: And then we've reduced that.
+
+345
+00:38:32.450 --> 00:38:39.839
+Caleob King: to this, 4x squared plus 0x plus 16. By the way, that was the… that was what… that was what was left over in our…
+
+346
+00:38:40.280 --> 00:38:43.809
+Caleob King: In our synthetic vision, the 4, the 0, and the 16.
+
+347
+00:38:44.670 --> 00:38:46.040
+Caleob King: Right?
+
+348
+00:38:49.470 --> 00:38:51.600
+Caleob King: The 4, the 0, the 16, right there?
+
+349
+00:38:52.390 --> 00:38:54.349
+Caleob King: That's what it… that's what was left over.
+
+350
+00:39:02.910 --> 00:39:08.670
+Caleob King: Yeah, the table, yeah, the table is… every time we find a zero, we go down by one power.
+
+351
+00:39:09.290 --> 00:39:10.020
+Caleob King: Alright.
+
+352
+00:39:13.160 --> 00:39:17.469
+Caleob King: So… This actually turns out to be something that we can easily solve.
+
+353
+00:39:18.660 --> 00:39:21.220
+Caleob King: Maybe not easily, but I think fairly easily.
+
+354
+00:39:23.640 --> 00:39:29.610
+Caleob King: If you just saw this, on your Algebra 2 homework.
+
+355
+00:39:31.030 --> 00:39:32.050
+Caleob King: Oh, sorry.
+
+356
+00:39:32.230 --> 00:39:34.549
+Caleob King: I think that maybe you would know how to solve that?
+
+357
+00:39:34.830 --> 00:39:37.759
+Caleob King: 4x squared plus 16 equals 0.
+
+358
+00:39:37.990 --> 00:39:47.380
+Caleob King: What you would do is you would say, well… I'd move 16 over here…
+
+359
+00:39:48.080 --> 00:39:50.620
+Caleob King: I would divide both sides by 4.
+
+360
+00:40:01.880 --> 00:40:05.339
+Caleob King: And then what would I do next? I'd see X squared is equal to minus 4,
+
+361
+00:40:09.280 --> 00:40:10.590
+Caleob King: Where would I go next?
+
+362
+00:40:14.920 --> 00:40:16.739
+Caleob King: Careful, it's easy to make a mistake.
+
+363
+00:40:17.400 --> 00:40:19.150
+Caleob King: Right.
+
+364
+00:40:19.620 --> 00:40:22.899
+Caleob King: We would take the square root of both sides.
+
+365
+00:40:25.580 --> 00:40:33.710
+Caleob King: Which would mean… that X was equal to plus or minus, to… I.
+
+366
+00:40:36.040 --> 00:40:40.549
+Caleob King: Alright? The square root of a negative number is not a negative number, it's an imaginary number.
+
+367
+00:40:41.220 --> 00:40:42.170
+Caleob King: Alright.
+
+368
+00:40:42.410 --> 00:40:48.189
+Caleob King: By the way, this is just a fast way of writing X is equal to 2i.
+
+369
+00:40:48.460 --> 00:40:50.679
+Caleob King: or X is equal to minus 2i.
+
+370
+00:40:52.220 --> 00:40:54.730
+Caleob King: Which, by the way, are our other two zeros.
+
+371
+00:40:55.270 --> 00:40:56.440
+Caleob King: 01.
+
+372
+00:40:56.710 --> 00:40:57.940
+Caleob King: 02.
+
+373
+00:40:59.070 --> 00:41:02.250
+Caleob King: 03… 04.
+
+374
+00:41:05.920 --> 00:41:13.929
+Caleob King: All right? And those are the four zeros that… of, of our polynomial. We've found it. We've tracked it down, we've done our complete detective work.
+
+375
+00:41:16.040 --> 00:41:17.450
+Caleob King: Any questions on that?
+
+376
+00:41:36.980 --> 00:41:42.680
+Caleob King: That's a good question. What is the practicality of Imaginary Zero? It depends on what your application is.
+
+377
+00:41:42.860 --> 00:41:52.210
+Caleob King: So… In physical systems, usually finding an imaginary zero just means
+
+378
+00:41:52.440 --> 00:41:58.729
+Caleob King: you don't… you could stop looking for real zeros. Like, these aren't solutions that actually happen in the universe.
+
+379
+00:41:58.880 --> 00:42:11.849
+Caleob King: So, if you were using a cubic equation, like, cubic equations describe wind power systems, for instance. As wind speed rises, the power developed by a wind turbine goes up by the cube. So, if you're trying to find for a certain
+
+380
+00:42:12.800 --> 00:42:25.959
+Caleob King: cubic value there, and you found an imaginary values, it means these aren't real values, you can look elsewhere, or once you find 3 of them, you can stop looking, like… I found the one and only value of the cubic solution here.
+
+381
+00:42:26.880 --> 00:42:32.169
+Caleob King: So, in physical systems, usually these are like, hey.
+
+382
+00:42:32.450 --> 00:42:37.189
+Caleob King: they're here, but that means they're not… they're not real solutions. However…
+
+383
+00:42:37.760 --> 00:42:46.890
+Caleob King: Sometimes when you're describing electrical engineering systems, Imaginary solutions can, indicate
+
+384
+00:42:47.120 --> 00:42:56.150
+Caleob King: It can indicate phase variance between two alternating current waves. So there are systems where imaginary solutions actually do
+
+385
+00:42:56.370 --> 00:42:57.790
+Caleob King: Turned out to be useful.
+
+386
+00:42:58.350 --> 00:43:03.290
+Caleob King: But… They're kind of few and far between in physical systems, so there's that.
+
+387
+00:43:11.450 --> 00:43:17.479
+Caleob King: So… Sometimes imaginary things just tell you to stop looking, other times they tell you something real.
+
+388
+00:43:20.600 --> 00:43:22.120
+Caleob King: Hope that answered your question.
+
+389
+00:43:24.700 --> 00:43:33.349
+Caleob King: Alright, so here's the general procedure for finding zeros, and then we'll call it a day, because I know it's been a super long class, thank you for sticking with me.
+
+390
+00:43:33.960 --> 00:43:35.449
+Caleob King: The general procedure.
+
+391
+00:43:35.930 --> 00:43:41.779
+Caleob King: Which, by the way, if you'd like to, try A, B, and C here.
+
+392
+00:43:42.440 --> 00:43:47.509
+Caleob King: and send those to me, I'd give you some extra credit on the Complex Zero quiz.
+
+393
+00:43:47.960 --> 00:43:51.979
+Caleob King: So, A, B, and C… Are problems that you can try on your own.
+
+394
+00:43:52.390 --> 00:43:53.400
+Caleob King: Alright.
+
+395
+00:43:54.400 --> 00:44:00.630
+Caleob King: What you're gonna do is you're going to poke around to find at least one zero.
+
+396
+00:44:01.230 --> 00:44:02.040
+Caleob King: Alright?
+
+397
+00:44:02.220 --> 00:44:06.529
+Caleob King: When you find that zero, you can use synthetic division to divide it out.
+
+398
+00:44:06.700 --> 00:44:16.460
+Caleob King: and reduce by 1 the power that you're dealing with. So you can turn quartics into cubics, cubics into quadratics, quadratics into linear terms.
+
+399
+00:44:17.570 --> 00:44:18.320
+Caleob King: Alright.
+
+400
+00:44:20.490 --> 00:44:35.490
+Caleob King: So there we go. And, at the very end, you'll reach a quadratic. Once you get to a quadratic, you can complete the square, you can factor, you can use the quadratic formula, which I'm gonna write down here, because some of you will have forgotten it.
+
+401
+00:44:47.790 --> 00:44:56.730
+Caleob King: Alright, once you get it down to a quadratic, you can just use this formula, and it'll pop out two answers for you. Those two answers are either going to be…
+
+402
+00:44:57.250 --> 00:44:59.270
+Caleob King: Two real numbers.
+
+403
+00:44:59.840 --> 00:45:03.669
+Caleob King: Or they're going to be too imaginary, or complex values.
+
+404
+00:45:03.810 --> 00:45:11.430
+Caleob King: Alright? And so that's why the complex values always occur in pairs. That's one of the reasons that complex values always occur in pairs.
+
+405
+00:45:11.940 --> 00:45:25.859
+Caleob King: So, for this, for this fourth degree polynomial, you might have 4 real zeros, you might have two real zeros and 2 complex ones, or you might have no real values and 4 complex ones.
+
+406
+00:45:25.980 --> 00:45:29.440
+Caleob King: So, the, the imaginary numbers always occur in pairs.
+
+407
+00:45:29.870 --> 00:45:31.110
+Caleob King: Alright.
+
+408
+00:45:32.200 --> 00:45:37.139
+Caleob King: Do some practice on this, think of yourself like a detective trying to track down all four zeros.
+
+409
+00:45:37.290 --> 00:45:39.069
+Caleob King: And
+
+410
+00:45:39.270 --> 00:45:49.080
+Caleob King: I don't know, I find it… I find it kind of a fun little exercise. Your mileage may vary, alright? Let me know if I can help you with anything. It's been a long class. Everyone have an awesome day. See you later!
+
+411
+00:45:49.330 --> 00:45:50.000
+Caleob King: Bye.
+
