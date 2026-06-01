@@ -95,6 +95,59 @@ export default function ExportPanel({ transcript, summary, mode, onModeChange, i
     setTimeout(() => setMdFeedback(false), 2000);
   };
 
+  /** Render the fishbowl logo icon programmatically on canvas */
+  function renderFishbowlIcon(): string {
+    const canvas = document.createElement('canvas');
+    canvas.width = 64;
+    canvas.height = 64;
+    const ctx = canvas.getContext('2d')!;
+    ctx.scale(2, 2);
+
+    // Draw rounded rect background
+    ctx.fillStyle = '#1a1714';
+    const rx = 6;
+    ctx.beginPath();
+    ctx.moveTo(rx, 0);
+    ctx.lineTo(32 - rx, 0);
+    ctx.quadraticCurveTo(32, 0, 32, rx);
+    ctx.lineTo(32, 32 - rx);
+    ctx.quadraticCurveTo(32, 32, 32 - rx, 32);
+    ctx.lineTo(rx, 32);
+    ctx.quadraticCurveTo(0, 32, 0, 32 - rx);
+    ctx.lineTo(0, rx);
+    ctx.quadraticCurveTo(0, 0, rx, 0);
+    ctx.closePath();
+    ctx.fill();
+
+    // Draw main bowl ellipse
+    ctx.strokeStyle = '#e8c44a';
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.ellipse(16, 15, 9, 10, 0, 0, Math.PI * 2);
+    ctx.stroke();
+
+    // Draw water line ellipse
+    ctx.lineWidth = 1.5;
+    ctx.beginPath();
+    ctx.ellipse(16, 20, 6, 3, 0, 0, Math.PI * 2);
+    ctx.stroke();
+
+    // Draw eye/bubble circle
+    ctx.fillStyle = '#e8c44a';
+    ctx.beginPath();
+    ctx.arc(13, 13, 1.5, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Draw fish tail/path
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.moveTo(14.5, 13.5);
+    ctx.quadraticCurveTo(16, 11, 17.5, 13);
+    ctx.stroke();
+
+    return canvas.toDataURL('image/png');
+  }
+
   /** Load an image as a base64 data URL */
   function loadImageAsDataUrl(src: string): Promise<string> {
     return new Promise((resolve, reject) => {
@@ -108,7 +161,17 @@ export default function ExportPanel({ transcript, summary, mode, onModeChange, i
         ctx.drawImage(img, 0, 0);
         resolve(canvas.toDataURL('image/png'));
       };
-      img.onerror = reject;
+      img.onerror = (err) => {
+        if (src.includes('fishbowl-icon.png')) {
+          try {
+            resolve(renderFishbowlIcon());
+          } catch (fallbackErr) {
+            reject(fallbackErr);
+          }
+        } else {
+          reject(err);
+        }
+      };
       img.src = src;
     });
   }
