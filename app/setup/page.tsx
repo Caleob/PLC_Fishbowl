@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { useFishbowlStore } from '@/lib/store';
+import { prefixPath } from '@/lib/basePath';
 import { createPanelistFromTemplate } from '@/engine/panelist';
 import type { PanelTemplate, Panelist } from '@/engine/types';
 import TemplatePicker from '@/components/setup/TemplatePicker';
@@ -63,7 +64,7 @@ export default function SetupPage() {
       setChecking(true);
       try {
         sessionId = crypto.randomUUID();
-        const res = await fetch('/api/capacity', {
+        const res = await fetch(prefixPath('/api/capacity'), {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ sessionId }),

@@ -1,4 +1,5 @@
 import type { LLMProvider, Message, StreamEvent, GenerateResult } from './types';
+import { prefixPath } from '@/lib/basePath';
 
 export class GeminiProvider implements LLMProvider {
   constructor(
@@ -9,7 +10,7 @@ export class GeminiProvider implements LLMProvider {
   ) {}
 
   async *stream(messages: Message[], options?: { signal?: AbortSignal }): AsyncIterable<StreamEvent> {
-    const response = await fetch('/api/llm', {
+    const response = await fetch(prefixPath('/api/llm'), {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -68,7 +69,7 @@ export class GeminiProvider implements LLMProvider {
   }
 
   async generate(messages: Message[]): Promise<GenerateResult> {
-    const response = await fetch('/api/llm', {
+    const response = await fetch(prefixPath('/api/llm'), {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

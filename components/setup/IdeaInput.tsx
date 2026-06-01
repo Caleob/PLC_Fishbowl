@@ -4,6 +4,7 @@ import { useState, useCallback } from 'react';
 import type { FileContent } from '@/engine/types';
 import { parseFiles } from '@/lib/fileParser';
 import { useFishbowlStore } from '@/lib/store';
+import { prefixPath } from '@/lib/basePath';
 import { HOSTED_MODEL_ID } from '@/lib/hostedSession';
 
 interface Props {
@@ -64,7 +65,7 @@ export default function IdeaInput({ ideaText, ideaFiles, onTextChange, onFilesCh
         body.apiKey = apiKey;
       }
 
-      const res = await fetch('/api/llm', {
+      const res = await fetch(prefixPath('/api/llm'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(body),

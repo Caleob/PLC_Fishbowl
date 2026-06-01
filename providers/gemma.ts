@@ -39,6 +39,8 @@ function delay(ms: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
+import { prefixPath } from '@/lib/basePath';
+
 /**
  * Gemma Local provider — interacts with a locally running Gemma model.
  * Calls a local API route that shells out to the gemma model/CLI.
@@ -47,7 +49,7 @@ export class GemmaProvider implements LLMProvider {
   constructor(private modelId?: string) {}
 
   async *stream(messages: Message[], options?: { signal?: AbortSignal }): AsyncIterable<StreamEvent> {
-    const response = await fetch('/api/gemma', {
+    const response = await fetch(prefixPath('/api/gemma'), {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -131,7 +133,7 @@ export class GemmaProvider implements LLMProvider {
   }
 
   async generate(messages: Message[]): Promise<GenerateResult> {
-    const response = await fetch('/api/gemma', {
+    const response = await fetch(prefixPath('/api/gemma'), {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

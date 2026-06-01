@@ -1,4 +1,4 @@
-export const basePath = '/PLC_Fishbowl';
+export const basePath = '/PLC_fishbowl';
 
 /**
  * Prepends the basePath to a given asset or page path if it isn't already present.

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import BuyMeCoffeeButton from '@/components/BuyMeCoffeeButton';
+import { prefixPath } from '@/lib/basePath';
 
 interface Props {
   onDismiss: () => void;
@@ -34,7 +35,7 @@ export default function LeadCapturePopup({ onDismiss, ideaText }: Props) {
 
     // Send to backend (Redis) — fire and don't block on failure
     try {
-      await fetch('/api/lead', {
+      await fetch(prefixPath('/api/lead'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: email.trim(), ideaText }),
