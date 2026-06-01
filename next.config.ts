@@ -5,7 +5,7 @@ const isExport = process.env.NEXT_PUBLIC_EXPORT === 'true' || process.env.GITHUB
 const nextConfig: NextConfig = {
   reactStrictMode: false,
   ...(isExport ? { output: 'export' } : {}),
-  basePath: '/PLC_fishbowl',
+  basePath: '/PLC_Fishbowl',
   images: {
     unoptimized: true,
   },
