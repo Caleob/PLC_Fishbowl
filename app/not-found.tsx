@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import { prefixPath } from '@/lib/basePath';
+
 
 export default function NotFound() {
   return (
@@ -109,7 +111,7 @@ export default function NotFound() {
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={`/sprites/characters/char_${2}_thinking.png`}
+            src={prefixPath(`/sprites/characters/char_${2}_thinking.png`)}
             alt="Confused character"
             width={64}
             height={64}

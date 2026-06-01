@@ -1,30 +1,13 @@
 import type { NextConfig } from "next";
 
-const securityHeaders = [
-  {
-    key: 'Referrer-Policy',
-    value: 'strict-origin-when-cross-origin',
-  },
-  {
-    key: 'X-Content-Type-Options',
-    value: 'nosniff',
-  },
-  {
-    key: 'Permissions-Policy',
-    value: 'camera=(), microphone=(), geolocation=(), browsing-topics=()',
-  },
-];
-
 const nextConfig: NextConfig = {
   reactStrictMode: false,
-  async headers() {
-    return [
-      {
-        source: '/:path*',
-        headers: securityHeaders,
-      },
-    ];
+  output: 'export',
+  basePath: '/PLC_Fishbowl',
+  images: {
+    unoptimized: true,
   },
 };
 
 export default nextConfig;
+

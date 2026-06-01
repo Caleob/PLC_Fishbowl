@@ -4,6 +4,8 @@ import { useEffect, useRef, useState, useCallback } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useFishbowlStore } from '@/lib/store';
+import { prefixPath } from '@/lib/basePath';
+
 import { FishbowlScene } from '@/scene/FishbowlScene';
 import { ConversationOrchestrator } from '@/engine/conversation';
 import { createProvider } from '@/providers/index';
@@ -916,7 +918,7 @@ export default function SessionPage() {
                           }}
                         >
                           <Image
-                            src={`/sprites/portraits/char_${p.spriteIndex}_portrait.png`}
+                            src={prefixPath(`/sprites/portraits/char_${p.spriteIndex}_portrait.png`)}
                             alt={`${p.name} portrait`}
                             fill
                             unoptimized
@@ -988,7 +990,7 @@ export default function SessionPage() {
                         }}
                       >
                         <Image
-                          src={`/sprites/portraits/char_${currentPanelist.spriteIndex}_portrait.png`}
+                          src={prefixPath(`/sprites/portraits/char_${currentPanelist.spriteIndex}_portrait.png`)}
                           alt={`${currentPanelist.name} portrait`}
                           fill
                           unoptimized

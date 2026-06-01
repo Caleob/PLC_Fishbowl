@@ -1,4 +1,5 @@
 import { Assets, Texture } from 'pixi.js';
+import { prefixPath } from './basePath';
 
 const POSES = ['idle', 'talking', 'thinking', 'reacting', 'gesturing', 'skeptical'] as const;
 const OBSERVER_POSES = ['standing_idle', 'standing_talking'] as const;
@@ -26,7 +27,7 @@ export async function loadTitleSprites(): Promise<void> {
   assets.push({ alias: 'fishbowl_table', src: '/sprites/room/fishbowl_table.png' });
   assets.push({ alias: 'table_shadow', src: '/sprites/shadows/table_shadow.png' });
 
-  await Assets.load(assets.map(a => ({ alias: a.alias, src: a.src })));
+  await Assets.load(assets.map(a => ({ alias: a.alias, src: prefixPath(a.src) })));
 }
 
 /** Load all sprites (full set for sessions) */
@@ -60,7 +61,7 @@ export async function loadAllSprites(): Promise<void> {
   assets.push({ alias: 'coffee_cups', src: '/sprites/room/coffee_cups.png' });
   assets.push({ alias: 'fishbowl_table', src: '/sprites/room/fishbowl_table.png' });
 
-  await Assets.load(assets.map(a => ({ alias: a.alias, src: a.src })));
+  await Assets.load(assets.map(a => ({ alias: a.alias, src: prefixPath(a.src) })));
 }
 
 export function getCharacterTexture(spriteIndex: number, pose: string): Texture | undefined {

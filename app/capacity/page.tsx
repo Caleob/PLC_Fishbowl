@@ -1,6 +1,8 @@
 'use client';
 
 import Link from 'next/link';
+import { prefixPath } from '@/lib/basePath';
+
 
 export default function CapacityPage() {
   return (
@@ -91,7 +93,7 @@ export default function CapacityPage() {
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={`/sprites/characters/char_${1}_thinking.png`}
+            src={prefixPath(`/sprites/characters/char_${1}_thinking.png`)}
             alt="Thinking character"
             width={64}
             height={64}

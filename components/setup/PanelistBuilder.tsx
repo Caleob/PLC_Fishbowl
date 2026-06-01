@@ -3,6 +3,8 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import type { Panelist } from '@/engine/types';
+import { prefixPath } from '@/lib/basePath';
+
 import { createCustomPanelist, createCustomPanelistLocal, createPanelistFromTemplate } from '@/engine/panelist';
 import { createProvider } from '@/providers';
 import { useFishbowlStore } from '@/lib/store';
@@ -111,7 +113,7 @@ export default function PanelistBuilder({ panelists, onUpdate }: Props) {
                 {/* Pixel-frame portrait */}
                 <div className="pixel-frame">
                   <Image
-                    src={`/sprites/portraits/char_${p.spriteIndex}_portrait.png`}
+                    src={prefixPath(`/sprites/portraits/char_${p.spriteIndex}_portrait.png`)}
                     alt={`${p.name} portrait`}
                     width={56}
                     height={56}

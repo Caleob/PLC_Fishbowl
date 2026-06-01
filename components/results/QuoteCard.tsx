@@ -2,6 +2,8 @@
 
 import { useState, useRef, useCallback, useEffect } from 'react';
 import type { TranscriptEntry, Panelist } from '@/engine/types';
+import { prefixPath } from '@/lib/basePath';
+
 
 interface QuoteCardProps {
   transcript: TranscriptEntry[];
@@ -196,7 +198,7 @@ async function renderQuoteCard(
   const portraitSize = 200;
 
   // Load portrait sprite
-  const portraitSrc = `/sprites/portraits/char_${quote.spriteIndex}_portrait.png`;
+  const portraitSrc = prefixPath(`/sprites/portraits/char_${quote.spriteIndex}_portrait.png`);
   let portrait: HTMLImageElement | null = null;
   try {
     portrait = await loadImage(portraitSrc);

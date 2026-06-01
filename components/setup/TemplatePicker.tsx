@@ -2,6 +2,8 @@
 
 import Image from 'next/image';
 import { PANEL_TEMPLATES } from '@/lib/templates';
+import { prefixPath } from '@/lib/basePath';
+
 import type { PanelTemplate } from '@/engine/types';
 
 // Fallback palette for inhabitant borders — cycled by index
@@ -76,7 +78,7 @@ export default function TemplatePicker({ onSelect }: Props) {
                     }}
                   >
                     <Image
-                      src={`/sprites/portraits/char_${idx}_portrait.png`}
+                      src={prefixPath(`/sprites/portraits/char_${idx}_portrait.png`)}
                       alt=""
                       width={24}
                       height={24}

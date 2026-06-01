@@ -4,6 +4,8 @@ import { Suspense, useEffect, useRef, useState, useCallback } from 'react';
 import Image from 'next/image';
 import { FishbowlScene } from '@/scene/FishbowlScene';
 import { loadAllSprites } from '@/lib/spriteLoader';
+import { prefixPath } from '@/lib/basePath';
+
 import type { Panelist, RoundType, TranscriptEntry } from '@/engine/types';
 import StatusBar from '@/components/scene/StatusBar';
 import TransitionOverlay from '@/components/scene/TransitionOverlay';
@@ -428,7 +430,7 @@ function DemoPageContent() {
                         }}
                       >
                         <Image
-                          src={`/sprites/portraits/char_${p.spriteIndex}_portrait.png`}
+                          src={prefixPath(`/sprites/portraits/char_${p.spriteIndex}_portrait.png`)}
                           alt={`${p.name} portrait`}
                           fill
                           unoptimized
@@ -491,7 +493,7 @@ function DemoPageContent() {
                       }}
                     >
                       <Image
-                        src={`/sprites/portraits/char_${currentPanelist.spriteIndex}_portrait.png`}
+                        src={prefixPath(`/sprites/portraits/char_${currentPanelist.spriteIndex}_portrait.png`)}
                         alt={`${currentPanelist.name} portrait`}
                         fill
                         unoptimized
