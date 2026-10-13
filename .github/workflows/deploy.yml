@@ -44,6 +44,8 @@ jobs:
         run: npm ci
       - name: Build with Next.js
         run: npm run build
+        env:
+          NEXT_PUBLIC_ENCODED_GEMINI_KEY: ${{ vars.NEXT_PUBLIC_ENCODED_GEMINI_KEY }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
