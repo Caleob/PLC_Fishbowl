@@ -1,0 +1,309 @@
+'use client';
+
+import { useState, useEffect, useRef } from 'react';
+import type { ReactNode } from 'react';
+import type { RoundType } from '@/engine/types';
+import { formatCost, formatTokens } from '@/lib/models';
+
+const prefersReducedMotion = () =>
+  typeof window !== 'undefined' &&
+  window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+interface Props {
+  round: RoundType;
+  panelistsSpoken: number;
+  totalPanelists: number;
+  onWrapUp: () => void;
+  canWrapUp: boolean;
+  modelLabel?: string;
+  costDollars?: number;
+  totalTokens?: number;
+  isOllama?: boolean;
+  centerContent?: ReactNode;
+}
+
+const ROUND_LABELS: Record<RoundType, string> = {
+  'initial-takes': 'ROUND 1 — INITIAL TAKES',
+  'cross-talk': 'ROUND 2 — CROSS-TALK',
+  'moderation': 'ROUND 3 — Q&A',
+  'wrap-up': 'FINAL TAKEAWAYS',
+  'summary': 'GENERATING SUMMARY...',
+};
+
+const ROUND_LABELS_SHORT: Record<RoundType, string> = {
+  'initial-takes': 'RD 1',
+  'cross-talk': 'RD 2',
+  'moderation': 'Q&A',
+  'wrap-up': 'WRAP-UP',
+  'summary': 'SUMMARY...',
+};
+
+export default function StatusBar({ round, panelistsSpoken, totalPanelists, onWrapUp, canWrapUp, modelLabel, costDollars, totalTokens, isOllama, centerContent }: Props) {
+  // Timer: counts up from session start
+  const [elapsed, setElapsed] = useState(0);
+  const startTimeRef = useRef(0);
+  const isHoveringRef = useRef(false);
+
+  useEffect(() => {
+    startTimeRef.current = Date.now();
+    const interval = setInterval(() => {
+      setElapsed(Math.floor((Date.now() - startTimeRef.current) / 1000));
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const minutes = Math.floor(elapsed / 60);
+  const seconds = elapsed % 60;
+  const timeStr = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+
+  const isActive = round !== 'summary' && round !== 'wrap-up';
+
+  return (
+    <div
+      className="max-w-[1000px] mx-auto rounded-b-xl overflow-hidden"
+      style={{
+        background: 'var(--dark-surface)',
+        borderTop: '2px solid var(--dark-border)',
+        position: 'relative',
+      }}
+    >
+      {/* Thin gold accent line at top */}
+      <div
+        style={{
+          height: '1px',
+          background: 'var(--accent-gold)',
+          opacity: 0.5,
+        }}
+      />
+
+      <div className="flex flex-wrap items-center justify-between gap-2 px-3 sm:px-4 py-2">
+        {/* Left: Round indicator + timer */}
+        <div className="flex items-center gap-3">
+          {/* Live/recording indicator */}
+          <div className="flex items-center gap-1.5">
+            <span
+              className="w-2 h-2 rounded-full flex-shrink-0"
+              style={{
+                background: isActive ? 'var(--accent-red)' : '#666',
+                boxShadow: isActive ? '0 0 6px rgba(232, 90, 74, 0.6)' : 'none',
+                animation: isActive ? 'statusPulse 2s ease-in-out infinite' : 'none',
+              }}
+            />
+            <span
+              style={{
+                fontFamily: "'DM Mono', monospace",
+                fontSize: '9px',
+                letterSpacing: '0.16em',
+                textTransform: 'uppercase',
+                color: isActive ? 'var(--accent-red)' : '#666',
+              }}
+            >
+              {isActive ? 'REC' : 'END'}
+            </span>
+          </div>
+
+          {/* Divider */}
+          <div style={{ width: '1px', height: '16px', background: 'var(--dark-divider)' }} />
+
+          {/* Round label */}
+          <span
+            style={{
+              fontFamily: "'DM Mono', monospace",
+              fontSize: '9px',
+              letterSpacing: '0.16em',
+              textTransform: 'uppercase',
+              color: 'var(--accent-gold)',
+            }}
+          >
+            <span className="hidden sm:inline">{ROUND_LABELS[round]}</span>
+            <span className="sm:hidden">{ROUND_LABELS_SHORT[round]}</span>
+          </span>
+        </div>
+
+        {/* Right: Stats + wrap up */}
+        <div className="flex items-center gap-2 sm:gap-3">
+          {/* Timer */}
+          <div
+            className="flex items-center gap-1.5 px-2 py-1 rounded"
+            style={{
+              background: 'rgba(255,255,255,0.05)',
+              border: '1px solid rgba(255,255,255,0.06)',
+            }}
+          >
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="rgba(196,154,42,0.7)" strokeWidth="2" strokeLinecap="round">
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 6 12 12 16 14" />
+            </svg>
+            <span
+              style={{
+                fontFamily: "'DM Mono', monospace",
+                fontSize: '11px',
+                fontWeight: 500,
+                color: 'rgba(255,255,255,0.7)',
+                fontVariantNumeric: 'tabular-nums',
+                animation: isActive ? 'timerPulse 2s ease-in-out infinite' : 'none',
+              }}
+            >
+              {timeStr}
+            </span>
+          </div>
+
+          {/* Model badge */}
+          {modelLabel && (
+            <span
+              className="hidden sm:inline-flex items-center px-2 py-0.5 rounded"
+              style={{
+                background: 'rgba(196, 154, 42, 0.12)',
+                border: '1px solid rgba(196, 154, 42, 0.2)',
+                fontFamily: "'DM Mono', monospace",
+                fontSize: '9px',
+                fontWeight: 500,
+                letterSpacing: '0.04em',
+                color: 'rgba(196, 154, 42, 0.8)',
+                textTransform: 'uppercase',
+              }}
+            >
+              {modelLabel}
+            </span>
+          )}
+
+          {/* Token/cost counter */}
+          {totalTokens != null && totalTokens > 0 && (
+            <span
+              className="hidden sm:inline"
+              style={{
+                fontFamily: "'DM Mono', monospace",
+                fontSize: '10px',
+                color: 'rgba(255,255,255,0.4)',
+              }}
+            >
+              {isOllama ? 'FREE' : `${formatCost(costDollars || 0)} / ${formatTokens(totalTokens)} tk`}
+            </span>
+          )}
+
+          {/* Panelist count */}
+          <span
+            className="hidden sm:inline"
+            style={{
+              fontFamily: "'DM Mono', monospace",
+              fontSize: '10px',
+              color: 'rgba(255,255,255,0.4)',
+            }}
+          >
+            {panelistsSpoken}/{totalPanelists}
+          </span>
+
+          {/* Wrap Up button — broadcast END SHOW style (gold during moderation) */}
+          {canWrapUp && (
+            <button
+              onClick={onWrapUp}
+              className="status-bar-wrap-btn"
+              style={{
+                fontFamily: "'Silkscreen', monospace",
+                fontSize: round === 'moderation' ? '11px' : '9px',
+                letterSpacing: '0.08em',
+                padding: round === 'moderation' ? '8px 16px' : '6px 12px',
+                borderRadius: '6px',
+                border: round === 'moderation'
+                  ? '2px solid var(--accent-gold)'
+                  : '1px solid rgba(232, 90, 74, 0.4)',
+                cursor: 'pointer',
+                background: round === 'moderation'
+                  ? 'linear-gradient(180deg, rgba(196, 154, 42, 0.25) 0%, rgba(196, 154, 42, 0.12) 100%)'
+                  : 'rgba(232, 90, 74, 0.12)',
+                color: round === 'moderation'
+                  ? 'var(--accent-gold-light)'
+                  : 'var(--accent-red)',
+                transition: 'transform 0.08s ease, box-shadow 0.08s ease, background 0.15s ease',
+                textTransform: 'uppercase',
+                animation: round === 'moderation' ? 'wrapGoldPulseSubtle 3s ease-in-out infinite' : 'none',
+                position: 'relative',
+              }}
+              onMouseEnter={(e) => {
+                isHoveringRef.current = true;
+                if (prefersReducedMotion()) return;
+                const el = e.currentTarget;
+                if (round === 'moderation') {
+                  el.style.background = 'linear-gradient(180deg, rgba(196, 154, 42, 0.4) 0%, rgba(196, 154, 42, 0.2) 100%)';
+                  el.style.transform = 'translate(-2px, -2px)';
+                  el.style.boxShadow = '4px 4px 0 var(--accent-gold)';
+                } else {
+                  el.style.background = 'rgba(232, 90, 74, 0.25)';
+                  el.style.borderColor = 'rgba(232, 90, 74, 0.6)';
+                  el.style.boxShadow = '0 0 12px rgba(232, 90, 74, 0.2)';
+                }
+              }}
+              onMouseLeave={(e) => {
+                isHoveringRef.current = false;
+                if (prefersReducedMotion()) return;
+                const el = e.currentTarget;
+                if (round === 'moderation') {
+                  el.style.background = 'linear-gradient(180deg, rgba(196, 154, 42, 0.25) 0%, rgba(196, 154, 42, 0.12) 100%)';
+                  el.style.transform = '';
+                  el.style.boxShadow = '';
+                } else {
+                  el.style.background = 'rgba(232, 90, 74, 0.12)';
+                  el.style.borderColor = 'rgba(232, 90, 74, 0.4)';
+                  el.style.boxShadow = 'none';
+                }
+              }}
+              onMouseDown={(e) => {
+                if (prefersReducedMotion()) return;
+                const el = e.currentTarget;
+                if (round === 'moderation') {
+                  el.style.transform = 'translate(0, 0)';
+                  el.style.boxShadow = '0 0 0 transparent';
+                }
+              }}
+              onMouseUp={(e) => {
+                if (prefersReducedMotion()) return;
+                const el = e.currentTarget;
+                if (round === 'moderation') {
+                  if (isHoveringRef.current) {
+                    el.style.transform = 'translate(-2px, -2px)';
+                    el.style.boxShadow = '4px 4px 0 var(--accent-gold)';
+                  } else {
+                    el.style.transform = '';
+                    el.style.boxShadow = '';
+                  }
+                }
+              }}
+            >
+              <span className="hidden sm:inline">{round === 'moderation' ? 'END SHOW' : 'WRAP SESSION'}</span>
+              <span className="sm:hidden">{round === 'moderation' ? 'END' : 'WRAP'}</span>
+            </button>
+          )}
+        </div>
+      </div>
+
+      {centerContent && (
+        <>
+          {/* Desktop: overlay centered on the bar */}
+          <div
+            className="hidden sm:flex"
+            style={{
+              position: 'absolute',
+              inset: 0,
+              alignItems: 'center',
+              justifyContent: 'center',
+              pointerEvents: 'none',
+            }}
+          >
+            <div style={{ pointerEvents: 'auto' }}>
+              {centerContent}
+            </div>
+          </div>
+          {/* Mobile: below the bar as its own row */}
+          <div
+            className="sm:hidden flex justify-center py-2"
+            style={{
+              borderTop: '1px solid var(--dark-border)',
+            }}
+          >
+            {centerContent}
+          </div>
+        </>
+      )}
+    </div>
+  );
+}
