@@ -10,9 +10,8 @@ export interface ModelOption {
 }
 
 const MODELS: ModelOption[] = [
-  { id: 'gemini-2.5-flash', label: 'Gemini 2.5 Flash (Fast & Balanced)', provider: 'gemini', tier: 'balanced', inputPer1M: 0.15, outputPer1M: 0.60 },
-  { id: 'gemini-2.0-flash', label: 'Gemini 2.0 Flash', provider: 'gemini', tier: 'fast', inputPer1M: 0.10, outputPer1M: 0.40 },
-  { id: 'gemini-1.5-flash', label: 'Gemini 1.5 Flash (Legacy)', provider: 'gemini', tier: 'fast', inputPer1M: 0.075, outputPer1M: 0.30 },
+  { id: 'gemini-3.8-flash', label: 'Gemini 3.8 Flash (Most Intelligent)', provider: 'gemini', tier: 'balanced', inputPer1M: 0.75, outputPer1M: 3.75 },
+  { id: 'gemini-3.5-flash-lite', label: 'Gemini 3.5 Flash-Lite (High Speed)', provider: 'gemini', tier: 'fast', inputPer1M: 0.30, outputPer1M: 2.50 },
 ];
 
 export function getModelsForProvider(provider: ProviderType): ModelOption[] {
@@ -25,7 +24,12 @@ export function getDefaultModel(provider: ProviderType): ModelOption {
 }
 
 export function getModelById(id: string): ModelOption | undefined {
-  return MODELS.find((m) => m.id === id);
+  const found = MODELS.find((m) => m.id === id);
+  if (found) return found;
+  if (id === 'gemini-2.5-flash') {
+    return { id: 'gemini-2.5-flash', label: 'Gemini 2.5 Flash', provider: 'gemini', tier: 'fast', inputPer1M: 0.15, outputPer1M: 0.60 };
+  }
+  return undefined;
 }
 
 export function estimateSessionCost(

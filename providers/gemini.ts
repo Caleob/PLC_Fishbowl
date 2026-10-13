@@ -6,7 +6,7 @@ export class GeminiProvider implements LLMProvider {
 
   constructor(
     apiKey?: string,
-    private modelId: string = 'gemini-2.5-flash',
+    private modelId: string = 'gemini-3.8-flash',
   ) {
     this.effectiveKey = getEffectiveGeminiKey(apiKey);
   }
@@ -36,7 +36,7 @@ export class GeminiProvider implements LLMProvider {
 
     const endpoint = 'streamGenerateContent';
     const streamParams = '&alt=sse';
-    const model = this.modelId || 'gemini-2.5-flash';
+    const model = this.modelId || 'gemini-3.8-flash';
     const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:${endpoint}?key=${this.effectiveKey}${streamParams}`;
 
     const response = await fetch(url, {

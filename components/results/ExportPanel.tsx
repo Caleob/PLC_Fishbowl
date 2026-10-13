@@ -354,7 +354,7 @@ export default function ExportPanel({ transcript, summary, mode, onModeChange, i
         doc.setFontSize(7.5);
         doc.setFont('helvetica', 'normal');
         doc.setTextColor(160, 155, 145);
-        doc.text('The Fishbowl  \u2022  fishbowl.show', margin, footerY);
+        doc.text('The Fishbowl  \u2022  Teacher Feedback Panel', margin, footerY);
         doc.text(`${i} / ${totalPages}`, pageWidth - margin, footerY, { align: 'right' });
       }
 

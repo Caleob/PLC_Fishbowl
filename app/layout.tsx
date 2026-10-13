@@ -15,22 +15,12 @@ export const metadata: Metadata = {
       'Assemble a panel of AI experts, pitch your idea, and watch them debate it live in a pixel-art scene.',
     type: 'website',
     siteName: 'The Fishbowl',
-    url: 'https://fishbowl.show',
-    images: [
-      {
-        url: 'https://fishbowl.show/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'The Fishbowl - AI experts debating in a pixel art scene',
-      },
-    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'The Fishbowl',
     description:
       'Assemble a panel of AI experts, pitch your idea, and watch them debate it live in a pixel-art scene.',
-    images: ['https://fishbowl.show/og-image.jpg'],
   },
   icons: {
     icon: [

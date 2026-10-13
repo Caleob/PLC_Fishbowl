@@ -22,6 +22,13 @@ export default function ApiKeyConfig({ apiKey, modelId, onApiKeyChange, onModelC
     }
   }, [apiKey, onApiKeyChange]);
 
+  // Migrate legacy saved modelId in localStorage to 3.8 Flash
+  useEffect(() => {
+    if (modelId !== 'gemini-3.8-flash' && modelId !== 'gemini-3.5-flash-lite') {
+      onModelChange('gemini-3.8-flash');
+    }
+  }, [modelId, onModelChange]);
+
   const models = getModelsForProvider('gemini');
   const effectiveKey = getEffectiveGeminiKey(apiKey);
   const isPreconfigured = !apiKey.trim() && !!effectiveKey;
@@ -68,19 +75,46 @@ export default function ApiKeyConfig({ apiKey, modelId, onApiKeyChange, onModelC
         </p>
 
         <div className="mt-4">
-          <div className="dossier-label">Model</div>
-          <select
-            value={modelId}
-            onChange={(e) => onModelChange(e.target.value)}
-            aria-label="AI model"
-            className="dossier-select"
-          >
-            {models.map((m) => (
-              <option key={m.id} value={m.id}>
-                {m.label} — ${m.inputPer1M}/${m.outputPer1M} per 1M tokens
-              </option>
-            ))}
-          </select>
+          <div className="dossier-label">Gemini Model</div>
+          <div className="grid grid-cols-2 gap-2 mt-1.5">
+            <button
+              type="button"
+              onClick={() => onModelChange('gemini-3.8-flash')}
+              className={`provider-pill text-left p-3 rounded-lg flex flex-col justify-between transition-all ${
+                modelId === 'gemini-3.8-flash' ? 'active' : ''
+              }`}
+            >
+              <div className="font-600 text-[12px] flex items-center justify-between w-full">
+                <span>3.8 Flash</span>
+                {modelId === 'gemini-3.8-flash' && <span className="text-[11px] font-mono">ACTIVE</span>}
+              </div>
+              <div className="text-[10px] mt-1 opacity-80 normal-case leading-tight">
+                Most intelligent • Deeper pedagogical feedback
+              </div>
+              <div className="text-[9px] mt-2 opacity-60 font-mono">
+                $0.75 / $3.75 per 1M
+              </div>
+            </button>
+
+            <button
+              type="button"
+              onClick={() => onModelChange('gemini-3.5-flash-lite')}
+              className={`provider-pill text-left p-3 rounded-lg flex flex-col justify-between transition-all ${
+                modelId === 'gemini-3.5-flash-lite' ? 'active' : ''
+              }`}
+            >
+              <div className="font-600 text-[12px] flex items-center justify-between w-full">
+                <span>3.5 Flash-Lite</span>
+                {modelId === 'gemini-3.5-flash-lite' && <span className="text-[11px] font-mono">ACTIVE</span>}
+              </div>
+              <div className="text-[10px] mt-1 opacity-80 normal-case leading-tight">
+                Ultra-fast • Lowest token cost
+              </div>
+              <div className="text-[9px] mt-2 opacity-60 font-mono">
+                $0.30 / $2.50 per 1M
+              </div>
+            </button>
+          </div>
         </div>
       </div>
     </div>
